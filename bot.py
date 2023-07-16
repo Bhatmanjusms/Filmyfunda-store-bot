@@ -314,6 +314,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
                 ]
+            )
         )
 
     elif "aboutdevs" in cb_data:
@@ -327,6 +328,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("Go Home", callback_data="gotohome")
                     ]
                 ]
+            )
         )
 
     elif "gotohome" in cb_data:
