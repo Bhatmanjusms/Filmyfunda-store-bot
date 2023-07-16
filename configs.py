@@ -10,7 +10,7 @@ class Config(object):
 	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_files_bot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001637400311"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "399726799"))
-	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.krtq5wm.mongodb.net/?retryWrites=true&w=majority")
+	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.zglig1z.mongodb.net/?retryWrites=true&w=majority")
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001637400311")
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
