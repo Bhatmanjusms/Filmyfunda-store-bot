@@ -391,7 +391,8 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
                 ]
-           )
+            )
+        )
 
     elif cb_data.startswith("ban_user_"):
         user_id = cb_data.split("_", 2)[-1]
