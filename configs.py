@@ -6,15 +6,15 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", "977080"))
 	API_HASH = os.environ.get("API_HASH", "0c20c4265501492a1513f91755acd42b")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "5833998378:AAEW7ZnRmtj8IbYf_5oxMThtc-n4GivFP0w")
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", "filmy_funda_store_bot")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6394289671:AAFLSJCS8F0OIp2td3zXVgnmsa66KRnNuVg")
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_files_bot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001637400311"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "399726799"))
 	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.krtq5wm.mongodb.net/?retryWrites=true&w=majority")
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001637400311")
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
-	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", False))
+	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
@@ -31,15 +31,11 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 📡 **Hosted on:** [Heroku](https://heroku.com)
 
 🧑🏻‍💻 **Developer:** @ded_eye
-
-📢 **Updates Channel:** [Filmy funda movies](https://t.me/filmyfunda_movies)
 """
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Developer:** @ded_eye
 
-Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
-
-Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
+remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
 """
 	HOME_TEXT = """
 Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
