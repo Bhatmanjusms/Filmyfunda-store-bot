@@ -340,6 +340,8 @@ async def button(bot: Client, cmd: CallbackQuery):
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
                     ]
+                ]
+            )
         )
 
     elif "refreshForceSub" in cb_data:
