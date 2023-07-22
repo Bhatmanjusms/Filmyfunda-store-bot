@@ -7,7 +7,7 @@ class Config(object):
 	API_ID = int(os.environ.get("API_ID", "977080"))
 	API_HASH = os.environ.get("API_HASH", "0c20c4265501492a1513f91755acd42b")
 	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6403936497:AAEl-WDsSnlGs4tEy0qUKXLRE74VdW3ovp0")
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_files_bot")
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_files1_bot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001637400311"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "399726799"))
 	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.zglig1z.mongodb.net/?retryWrites=true&w=majority")
