@@ -21,7 +21,7 @@ class Config(object):
 	IS_SHORTNER = False
 	API_URL = 'https://tnshort.net/api'
 	API_KEY = 'a85e8131ddd156a0b673a35675d01c4dbee914d9'
-	DELAY_DELETE_TIME = 60 #In seconds
+	DELAY_DELETE_TIME = 1800 #In seconds
 	ABOUT_BOT_TEXT = f"""
 This is Permanent Files Store Bot!
 Send me any file I will save it in my Database. Also works for channel. Add me to channel as Admin with Edit Permission, I will add Save Uploaded File in Channel & add Sharable Button Link.
