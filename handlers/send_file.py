@@ -7,7 +7,7 @@ from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from handlers.helpers import str_to_b64
 
-
+delete_delay = 2 * 60
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
@@ -16,6 +16,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
         elif Config.FORWARD_AS_COPY is False:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
+        time.sleep(delete_delay)
+        bot.delete_messages(chat_id=user_id,message_id=file_id)
     except FloodWait as e:
         await asyncio.sleep(e.value)
         return media_forward(bot, user_id, file_id)
