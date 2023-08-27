@@ -10,7 +10,7 @@ from pyrogram.types import (
 )
 from pyrogram.errors import FloodWait
 from handlers.helpers import str_to_b64
-
+from shortner import short
 
 async def forward_to_channel(bot: Client, message: Message, editable: Message):
     try:
@@ -50,11 +50,12 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             ]])
         )
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
+        short_link = short(share_link)
         await editable.edit(
             f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: {share_link} \n\n"
             f"Just Click the link to get your files!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)]]
+                [[InlineKeyboardButton("Open Link", url=short_link)]]
             ),
             disable_web_page_preview=True
         )
@@ -62,7 +63,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             chat_id=int(Config.LOG_CHANNEL),
             text=f"#BATCH_SAVE:\n\n[{editable.reply_to_message.from_user.first_name}](tg://user?id={editable.reply_to_message.from_user.id}) Got Batch Link!",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Open Link", url=share_link)]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Open Link", url=short_link)]])
         )
     except Exception as err:
         await editable.edit(f"Something Went Wrong!\n\n**Error:** `{err}`")
@@ -86,12 +87,13 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
             disable_web_page_preview=True)
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(file_er_id)}"
+        short_link = short(share_link)
         await editable.edit(
             "**Your File Stored in my Database!**\n\n"
-            f"Here is the Permanent Link of your file: {share_link} \n\n"
+            f"Here is the Permanent Link of your file: {short_link} \n\n"
             "Just Click the link to get your file!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)]]
+                [[InlineKeyboardButton("Open Link", url=short_link)]]
             ),
             disable_web_page_preview=True
         )
