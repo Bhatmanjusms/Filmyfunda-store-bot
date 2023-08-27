@@ -18,7 +18,7 @@ class Config(object):
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
-	IS_SHORTNER = True
+	IS_SHORTNER = False
 	API_URL = 'https://tnshort.net/api'
 	API_KEY = 'a85e8131ddd156a0b673a35675d01c4dbee914d9'
 	DELAY_DELETE_TIME = 60 #In seconds
