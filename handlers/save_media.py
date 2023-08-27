@@ -49,10 +49,10 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
                 InlineKeyboardButton("Delete Batch", callback_data="closeMessage")
             ]])
         )
-        if Config.IS_SHORTNER == False:
+        if Config.IS_SHORTNER is True:
            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
            short_link = short(share_link)
-        else:
+        elif Config.IS_SHORTNER is False:
             share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
             short_link = share_link
         await editable.edit(
@@ -90,10 +90,10 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         await forwarded_msg.reply_text(
             f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
             disable_web_page_preview=True)
-        if Config.IS_SHORTNER == False:
+        if Config.IS_SHORTNER is True:
            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
            short_link = short(share_link)
-        else:
+        if Config.IS_SHORTNER is False:
             share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
             short_link = share_link
         await editable.edit(
