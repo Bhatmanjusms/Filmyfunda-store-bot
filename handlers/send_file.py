@@ -7,7 +7,7 @@ from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from handlers.helpers import str_to_b64
 
-delete_delay = 30
+delete_delay = Config.DELAY_DELETE_TIME
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
