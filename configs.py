@@ -6,7 +6,7 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", "977080"))
 	API_HASH = os.environ.get("API_HASH", "0c20c4265501492a1513f91755acd42b")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6030145995:AAGqawj9tdp6rAv6FSM6NonH6dbjKBX6rVc")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6024989918:AAFOozPSXxORSGb1yagTCKydhyRA0-pLYxA")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME", "Stream_TeleXBot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001435020763"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "5297549539"))
