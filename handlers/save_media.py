@@ -51,7 +51,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         )
         if Config.IS_SHORTNER is True:
            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
-           short_link = short(share_link)
+           short_link = share_link
         elif Config.IS_SHORTNER is False:
             share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
             short_link = share_link
@@ -92,8 +92,8 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             disable_web_page_preview=True)
         if Config.IS_SHORTNER is True:
            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
-           short_link = short(share_link)
-        if Config.IS_SHORTNER is False:
+           short_link = share_link
+        elif Config.IS_SHORTNER is False:
             share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=thunderbot_{str_to_b64(str(SaveMessage.id))}"
             short_link = share_link
         await editable.edit(
