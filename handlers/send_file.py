@@ -26,5 +26,5 @@ async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
     sent_message = await media_forward(bot, user_id, file_id)
     await asyncio.sleep(2)
     await asyncio.sleep(delete_delay)
-    msg_ig = sent_message.message_id
+    msg_ig = sent_message.id
     bot.delete_messages(chat_id=user_id,message_id=msg_id)
