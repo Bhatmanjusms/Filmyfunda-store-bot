@@ -6,10 +6,10 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", "977080"))
 	API_HASH = os.environ.get("API_HASH", "0c20c4265501492a1513f91755acd42b")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6024989918:AAFOozPSXxORSGb1yagTCKydhyRA0-pLYxA")
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", "Stream_TeleXBot")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6358096220:AAGT3mgBRl2tGSZq9qhMnkfSlTl2NoeO_7g")
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_files2_bot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001435020763"))
-	BOT_OWNER = int(os.environ.get("BOT_OWNER", "5297549539"))
+	BOT_OWNER = int(os.environ.get("BOT_OWNER", "399726799"))
 	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.zglig1z.mongodb.net/?retryWrites=true&w=majority")
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001435020763")
