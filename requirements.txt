@@ -2,6 +2,5 @@ Pyrogram
 TgCrypto
 motor
 aiofiles
-dnspython
 psutil
 dnspython==2.3.0
