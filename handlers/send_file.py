@@ -24,7 +24,10 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
     sent_message = await media_forward(bot, user_id, file_id)
-    await asyncio.sleep(2)
-    await asyncio.sleep(delete_delay)
-    msg_id = sent_message.id
-    await bot.delete_messages(user_id,[msg_id])
+    txt = f'<b>Files Will Be Deleted in {delete_delay} seconds to avoid copyrights  issues.Please forward and save them.</b>'
+    await bot.send_message(chat_id=user_id,text=txt)
+    await asyncio.sleep(0.5)
+    return sent_message
+    # await asyncio.sleep(delete_delay)
+    # msg_id = sent_message.id
+    # await bot.delete_messages(user_id,[msg_id])
