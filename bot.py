@@ -97,8 +97,13 @@ async def start(bot: Client, cmd: Message):
                 )
             else:
                 message_ids.append(int(GetMessage.id))
+            send_message_ids = []
             for i in range(len(message_ids)):
-                await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_ids[i]))
+                msg = await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_ids[i]))
+                send_message_ids.append(msg.id)
+            await asyncio.sleep(int(Config.DELAY_DELETE_TIME))
+            #for i in message_ids:
+            await bot.delete_messages(cmd.from_user.id,send_message_ids)
         except Exception as err:
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
