@@ -6,8 +6,8 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", "977080"))
 	API_HASH = os.environ.get("API_HASH", "0c20c4265501492a1513f91755acd42b")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6436297049:AAGHO5rPl91U-N5KKaQFDR9MV4V1an0yZy8")
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", "test_5678_bot")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "5991682088:AAH0et9kUURGDnPlXz1iaL5FG4smgHCoEak")
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", "thunder_store3_bot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001637400311"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "399726799"))
 	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://abcd:abcd@cluster0.zglig1z.mongodb.net/?retryWrites=true&w=majority")
@@ -19,8 +19,8 @@ class Config(object):
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
 	IS_SHORTNER = True
-	API_URL = 'https://tnshort.net/api'
-	API_KEY = 'a85e8131ddd156a0b673a35675d01c4dbee914d9'
+	API_URL = 'https://onepagelink.in/api'
+	API_KEY = '4468800fe08226c1102ca7a0e72dc67f3fb72232'
 	DELAY_DELETE_TIME = 1800 #In seconds
 	ABOUT_BOT_TEXT = f"""
 This is Permanent Files Store Bot!
